@@ -41,13 +41,14 @@ private final String FileNameAndPath = System.getProperty("user.dir") + File.sep
 				}
 			}
 			fin.close();
+			return appliance;
 		} catch (java.io.FileNotFoundException e) {
 			System.out.println("File not found");
 		} catch (java.io.IOException | ClassNotFoundException | IllegalAccessException | InstantiationException e) {
 			e.printStackTrace();
 		}
 
-		return appliance;
+		return null;
 	}
 	
 	// you may add your own code here
